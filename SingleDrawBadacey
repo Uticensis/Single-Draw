@@ -14,7 +14,7 @@ class rsCard(object):
     def __init__(self, deckInteger):
         rsCard.suit = suitDictionary[(deckInteger-1)//13]
         rsCard.rank = deckInteger%13
-        if rsCard.rank == 0:    'King'
+        if rsCard.rank == 0:    #King
             rsCard.rank = 13
 
         
@@ -37,7 +37,7 @@ def rsHand(handList):
 
         
 def noPairVal(cards):
-""" Returns a number between 0 and <1 representing the strength of
+    """ Returns a number between 0 and <1 representing the strength of
 a no-pair hand. The idea is to allow for quick comparison and sorting.
 The input, cards, is a list of integers from 1 to 52.
 """
